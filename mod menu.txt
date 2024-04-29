@@ -3,383 +3,265 @@
 --current version 1.0
 --loadstring(game:HttpGet('https://raw.githubusercontent.com/Eham123/roblox-mod-menu-gui/main/mod%20menu.txt')()
 
-local ScreenGui = Instance.new("ScreenGui")
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local modmenu = Instance.new("Folder")
 local Frame = Instance.new("Frame")
-local title = Instance.new("TextBox")
-local walkspeedandjumppower = Instance.new("TextButton")
-local gae = Instance.new("TextBox")
-local wajp = Instance.new("TextBox")
 local resetwalkspeed = Instance.new("TextButton")
-local Frame_2 = Instance.new("Frame")
 local walkspeed50 = Instance.new("TextButton")
 local walkspeed100 = Instance.new("TextButton")
 local resetjumppower = Instance.new("TextButton")
 local jumppower2x = Instance.new("TextButton")
 local jumppower5x = Instance.new("TextButton")
 local jumppower10x = Instance.new("TextButton")
-local flingscript = Instance.new("TextButton")
+local controlclicktp = Instance.new("TextButton")
+local closemodmenu = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local invisibleheadon = Instance.new("TextButton")
+local invisibleheadoff = Instance.new("TextButton")
+local setwalkspeed = Instance.new("TextButton")
+local walkspeed = Instance.new("TextBox")
+local jumppower = Instance.new("TextBox")
+local setjumppower = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local togglemodmenu = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+modmenu.Name = "mod menu"
+modmenu.Parent = game.StarterGui.ScreenGui
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(149, 0, 255)
+Frame.Parent = modmenu
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 4
-Frame.Position = UDim2.new(0.717281282, 0, 0.619354844, 0)
-Frame.Size = UDim2.new(0, 375, 0, 219)
-
-title.Name = "title"
-title.Parent = Frame
-title.BackgroundColor3 = Color3.fromRGB(149, 0, 255)
-title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-title.BorderSizePixel = 4
-title.Size = UDim2.new(0, 375, 0, 21)
-title.Font = Enum.Font.SourceSans
-title.Text = "Mod Menu Made by rabybabybumpers2 V1.0"
-title.TextColor3 = Color3.fromRGB(0, 0, 0)
-title.TextSize = 14.000
-
-walkspeedandjumppower.Name = "walkspeed and jump power"
-walkspeedandjumppower.Parent = Frame
-walkspeedandjumppower.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
-walkspeedandjumppower.BorderColor3 = Color3.fromRGB(0, 0, 0)
-walkspeedandjumppower.BorderSizePixel = 4
-walkspeedandjumppower.Position = UDim2.new(0, 0, 0.264840186, 0)
-walkspeedandjumppower.Size = UDim2.new(0, 168, 0, 18)
-walkspeedandjumppower.Font = Enum.Font.SourceSans
-walkspeedandjumppower.Text = "Walk Speed And Jump Power"
-walkspeedandjumppower.TextColor3 = Color3.fromRGB(0, 0, 0)
-walkspeedandjumppower.TextSize = 14.000
-
-gae.Name = "gae"
-gae.Parent = Frame
-gae.BackgroundColor3 = Color3.fromRGB(149, 0, 255)
-gae.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gae.BorderSizePixel = 4
-gae.Position = UDim2.new(0, 0, 0.132420093, 0)
-gae.Size = UDim2.new(0, 180, 0, 22)
-gae.Font = Enum.Font.SourceSans
-gae.Text = "Guis And Etc"
-gae.TextColor3 = Color3.fromRGB(0, 0, 0)
-gae.TextSize = 14.000
-
-wajp.Name = "wajp"
-wajp.Parent = Frame
-wajp.BackgroundColor3 = Color3.fromRGB(149, 0, 255)
-wajp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-wajp.BorderSizePixel = 4
-wajp.Position = UDim2.new(0.538666666, 0, 0.132420093, 0)
-wajp.Size = UDim2.new(0, 173, 0, 22)
-wajp.Font = Enum.Font.SourceSans
-wajp.Text = "Walkspeed And Jumppower"
-wajp.TextColor3 = Color3.fromRGB(0, 0, 0)
-wajp.TextSize = 14.000
+Frame.Position = UDim2.new(0.368537873, 0, 0.356255621, 0)
+Frame.Size = UDim2.new(0, 388, 0, 257)
 
 resetwalkspeed.Name = "reset walkspeed"
 resetwalkspeed.Parent = Frame
-resetwalkspeed.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+resetwalkspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 resetwalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
 resetwalkspeed.BorderSizePixel = 4
-resetwalkspeed.Position = UDim2.new(0.55733335, 0, 0.264840186, 0)
-resetwalkspeed.Size = UDim2.new(0, 166, 0, 18)
-resetwalkspeed.Font = Enum.Font.SourceSans
+resetwalkspeed.Position = UDim2.new(0.497474909, 0, 0.393245012, 0)
+resetwalkspeed.Size = UDim2.new(0, 194, 0, 18)
+resetwalkspeed.Font = Enum.Font.FredokaOne
 resetwalkspeed.Text = "Reset Walkspeed"
 resetwalkspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
 resetwalkspeed.TextSize = 14.000
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(149, 0, 255)
-Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderSizePixel = 4
-Frame_2.Position = UDim2.new(0.469333321, 0, 0.132420093, 0)
-Frame_2.Size = UDim2.new(0, 25, 0, 190)
-
 walkspeed50.Name = "walkspeed 50"
 walkspeed50.Parent = Frame
-walkspeed50.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+walkspeed50.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 walkspeed50.BorderColor3 = Color3.fromRGB(0, 0, 0)
 walkspeed50.BorderSizePixel = 4
-walkspeed50.Position = UDim2.new(0.55733335, 0, 0.374429226, 0)
-walkspeed50.Size = UDim2.new(0, 166, 0, 18)
-walkspeed50.Font = Enum.Font.SourceSans
+walkspeed50.Position = UDim2.new(0.500052214, 0, 0.487269551, 0)
+walkspeed50.Size = UDim2.new(0, 192, 0, 18)
+walkspeed50.Font = Enum.Font.FredokaOne
 walkspeed50.Text = "Set Walkspeed 50"
 walkspeed50.TextColor3 = Color3.fromRGB(0, 0, 0)
 walkspeed50.TextSize = 14.000
 
 walkspeed100.Name = "walkspeed 100"
 walkspeed100.Parent = Frame
-walkspeed100.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+walkspeed100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 walkspeed100.BorderColor3 = Color3.fromRGB(0, 0, 0)
 walkspeed100.BorderSizePixel = 4
-walkspeed100.Position = UDim2.new(0.55733335, 0, 0.488584489, 0)
-walkspeed100.Size = UDim2.new(0, 166, 0, 18)
-walkspeed100.Font = Enum.Font.SourceSans
+walkspeed100.Position = UDim2.new(0.497474909, 0, 0.578078687, 0)
+walkspeed100.Size = UDim2.new(0, 194, 0, 18)
+walkspeed100.Font = Enum.Font.FredokaOne
 walkspeed100.Text = "Set Walkspeed 100"
 walkspeed100.TextColor3 = Color3.fromRGB(0, 0, 0)
 walkspeed100.TextSize = 14.000
 
 resetjumppower.Name = "reset jumppower"
 resetjumppower.Parent = Frame
-resetjumppower.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+resetjumppower.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 resetjumppower.BorderColor3 = Color3.fromRGB(0, 0, 0)
 resetjumppower.BorderSizePixel = 4
-resetjumppower.Position = UDim2.new(0.55733335, 0, 0.598173499, 0)
-resetjumppower.Size = UDim2.new(0, 166, 0, 18)
-resetjumppower.Font = Enum.Font.SourceSans
+resetjumppower.Position = UDim2.new(0.497474909, 0, 0.668212414, 0)
+resetjumppower.Size = UDim2.new(0, 194, 0, 18)
+resetjumppower.Font = Enum.Font.FredokaOne
 resetjumppower.Text = "Reset Jumppower"
 resetjumppower.TextColor3 = Color3.fromRGB(0, 0, 0)
 resetjumppower.TextSize = 14.000
 
 jumppower2x.Name = "jumppower 2x"
 jumppower2x.Parent = Frame
-jumppower2x.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+jumppower2x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 jumppower2x.BorderColor3 = Color3.fromRGB(0, 0, 0)
 jumppower2x.BorderSizePixel = 4
-jumppower2x.Position = UDim2.new(0.55733335, 0, 0.707762539, 0)
-jumppower2x.Size = UDim2.new(0, 166, 0, 18)
-jumppower2x.Font = Enum.Font.SourceSans
+jumppower2x.Position = UDim2.new(0.500052214, 0, 0.770019293, 0)
+jumppower2x.Size = UDim2.new(0, 191, 0, 18)
+jumppower2x.Font = Enum.Font.FredokaOne
 jumppower2x.Text = "Set Jumppower 2x"
 jumppower2x.TextColor3 = Color3.fromRGB(0, 0, 0)
 jumppower2x.TextSize = 14.000
 
 jumppower5x.Name = "jumppower 5x"
 jumppower5x.Parent = Frame
-jumppower5x.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+jumppower5x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 jumppower5x.BorderColor3 = Color3.fromRGB(0, 0, 0)
 jumppower5x.BorderSizePixel = 4
-jumppower5x.Position = UDim2.new(0.55733335, 0, 0.81735158, 0)
-jumppower5x.Size = UDim2.new(0, 166, 0, 18)
-jumppower5x.Font = Enum.Font.SourceSans
+jumppower5x.Position = UDim2.new(0.497474909, 0, 0.856262922, 0)
+jumppower5x.Size = UDim2.new(0, 193, 0, 14)
+jumppower5x.Font = Enum.Font.FredokaOne
 jumppower5x.Text = "Set Jumppower 5x"
 jumppower5x.TextColor3 = Color3.fromRGB(0, 0, 0)
 jumppower5x.TextSize = 14.000
 
 jumppower10x.Name = "jumppower 10x"
 jumppower10x.Parent = Frame
-jumppower10x.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
+jumppower10x.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 jumppower10x.BorderColor3 = Color3.fromRGB(0, 0, 0)
 jumppower10x.BorderSizePixel = 4
-jumppower10x.Position = UDim2.new(0.55733335, 0, 0.917808235, 0)
-jumppower10x.Size = UDim2.new(0, 166, 0, 18)
-jumppower10x.Font = Enum.Font.SourceSans
+jumppower10x.Position = UDim2.new(0.500052214, 0, 0.928428113, 0)
+jumppower10x.Size = UDim2.new(0, 191, 0, 18)
+jumppower10x.Font = Enum.Font.FredokaOne
 jumppower10x.Text = "Set Jumppower 10x"
 jumppower10x.TextColor3 = Color3.fromRGB(0, 0, 0)
 jumppower10x.TextSize = 14.000
 
-flingscript.Name = "fling script"
-flingscript.Parent = Frame
-flingscript.BackgroundColor3 = Color3.fromRGB(93, 0, 255)
-flingscript.BorderColor3 = Color3.fromRGB(0, 0, 0)
-flingscript.BorderSizePixel = 4
-flingscript.Position = UDim2.new(0, 0, 0.374429226, 0)
-flingscript.Size = UDim2.new(0, 168, 0, 18)
-flingscript.Font = Enum.Font.SourceSans
-flingscript.Text = "Fling Script"
-flingscript.TextColor3 = Color3.fromRGB(0, 0, 0)
-flingscript.TextSize = 14.000
+controlclicktp.Name = "control click tp"
+controlclicktp.Parent = Frame
+controlclicktp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+controlclicktp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+controlclicktp.BorderSizePixel = 4
+controlclicktp.Position = UDim2.new(0.00257731951, 0, 0.578078687, 0)
+controlclicktp.Size = UDim2.new(0, 185, 0, 18)
+controlclicktp.Font = Enum.Font.FredokaOne
+controlclicktp.Text = "Ctrl + Click Tp"
+controlclicktp.TextColor3 = Color3.fromRGB(0, 0, 0)
+controlclicktp.TextSize = 14.000
+
+closemodmenu.Name = "close mod menu"
+closemodmenu.Parent = Frame
+closemodmenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+closemodmenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+closemodmenu.BorderSizePixel = 4
+closemodmenu.Position = UDim2.new(0.952178657, 0, 0, 0)
+closemodmenu.Size = UDim2.new(0, 16, 0, 15)
+closemodmenu.Font = Enum.Font.SourceSans
+closemodmenu.Text = "x"
+closemodmenu.TextColor3 = Color3.fromRGB(0, 0, 0)
+closemodmenu.TextSize = 14.000
+
+fly.Name = "fly"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fly.BorderSizePixel = 4
+fly.Position = UDim2.new(0, 0, 0.668212414, 0)
+fly.Size = UDim2.new(0, 186, 0, 18)
+fly.Font = Enum.Font.FredokaOne
+fly.Text = "Fly"
+fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+fly.TextSize = 14.000
+
+invisibleheadon.Name = "invisible head on"
+invisibleheadon.Parent = Frame
+invisibleheadon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+invisibleheadon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+invisibleheadon.BorderSizePixel = 4
+invisibleheadon.Position = UDim2.new(0.00515463902, 0, 0.770019293, 0)
+invisibleheadon.Size = UDim2.new(0, 185, 0, 18)
+invisibleheadon.Font = Enum.Font.FredokaOne
+invisibleheadon.Text = "Invisible Head On"
+invisibleheadon.TextColor3 = Color3.fromRGB(0, 0, 0)
+invisibleheadon.TextSize = 14.000
+
+invisibleheadoff.Name = "invisible head off"
+invisibleheadoff.Parent = Frame
+invisibleheadoff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+invisibleheadoff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+invisibleheadoff.BorderSizePixel = 4
+invisibleheadoff.Position = UDim2.new(0.00257731951, 0, 0.843548119, 0)
+invisibleheadoff.Size = UDim2.new(0, 185, 0, 18)
+invisibleheadoff.Font = Enum.Font.FredokaOne
+invisibleheadoff.Text = "Invisible Head Off"
+invisibleheadoff.TextColor3 = Color3.fromRGB(0, 0, 0)
+invisibleheadoff.TextSize = 14.000
+
+setwalkspeed.Name = "set walkspeed"
+setwalkspeed.Parent = Frame
+setwalkspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+setwalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+setwalkspeed.BorderSizePixel = 4
+setwalkspeed.Position = UDim2.new(0.165333539, 0, 0.393245012, 0)
+setwalkspeed.Size = UDim2.new(0, 122, 0, 18)
+setwalkspeed.Font = Enum.Font.FredokaOne
+setwalkspeed.Text = "Set Walkspeed"
+setwalkspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+setwalkspeed.TextSize = 14.000
+
+walkspeed.Name = "walkspeed"
+walkspeed.Parent = Frame
+walkspeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+walkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+walkspeed.BorderSizePixel = 4
+walkspeed.Position = UDim2.new(0.00515463902, 0, 0.393245012, 0)
+walkspeed.Size = UDim2.new(0, 62, 0, 18)
+walkspeed.Font = Enum.Font.SourceSans
+walkspeed.PlaceholderText = "Speed"
+walkspeed.Text = ""
+walkspeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+walkspeed.TextSize = 14.000
+
+jumppower.Name = "jumppower"
+jumppower.Parent = Frame
+jumppower.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+jumppower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jumppower.BorderSizePixel = 4
+jumppower.Position = UDim2.new(0, 0, 0.48726967, 0)
+jumppower.Size = UDim2.new(0, 62, 0, 18)
+jumppower.Font = Enum.Font.SourceSans
+jumppower.PlaceholderText = "Jump"
+jumppower.Text = ""
+jumppower.TextColor3 = Color3.fromRGB(0, 0, 0)
+jumppower.TextSize = 14.000
+
+setjumppower.Name = "set jumppower"
+setjumppower.Parent = Frame
+setjumppower.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+setjumppower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+setjumppower.BorderSizePixel = 4
+setjumppower.Position = UDim2.new(0.165333226, 0, 0.487269551, 0)
+setjumppower.Size = UDim2.new(0, 122, 0, 18)
+setjumppower.Font = Enum.Font.FredokaOne
+setjumppower.Text = "Set Jumppower"
+setjumppower.TextColor3 = Color3.fromRGB(0, 0, 0)
+setjumppower.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 4
+TextLabel.Position = UDim2.new(0, 0, 0.105058365, 0)
+TextLabel.Size = UDim2.new(0, 386, 0, 67)
+TextLabel.Font = Enum.Font.Arcade
+TextLabel.Text = "Mod Menu Made by Eham#5756"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 25.000
+
+togglemodmenu.Name = "toggle mod menu"
+togglemodmenu.Parent = modmenu
+togglemodmenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+togglemodmenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+togglemodmenu.BorderSizePixel = 4
+togglemodmenu.Position = UDim2.new(0, 0, 0.972580671, 0)
+togglemodmenu.Size = UDim2.new(0, 91, 0, 17)
+togglemodmenu.Font = Enum.Font.Arcade
+togglemodmenu.Text = "Toggle Menu"
+togglemodmenu.TextColor3 = Color3.fromRGB(0, 0, 0)
+togglemodmenu.TextSize = 14.000
 
 -- Scripts:
 
-local function HTKHNIC_fake_script() -- walkspeedandjumppower.LocalScript 
-	local script = Instance.new('LocalScript', walkspeedandjumppower)
-
-	function testNumberOne()
-		local Hacks = Instance.new("ScreenGui")
-		local Background = Instance.new("Frame")
-		local Walkspeedlb = Instance.new("TextLabel")
-		local jumppowerlb = Instance.new("TextLabel")
-		local speed = Instance.new("TextLabel")
-		local jump = Instance.new("TextLabel")
-		local WalkBox = Instance.new("TextBox")
-		local JumpBox = Instance.new("TextBox")
-		local WalkSumbit = Instance.new("TextButton")
-		local JumpSumbit = Instance.new("TextButton")
-		local TextLabel = Instance.new("TextLabel")
-		local Open = Instance.new("TextButton")
-		--Properties:
-		Hacks.Name = "Hacks"
-		Hacks.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-		Hacks.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-		Background.Name = "Background"
-		Background.Parent = Hacks
-		Background.BackgroundColor3 = Color3.new(0, 0, 0)
-		Background.BackgroundTransparency = 0.40000000596046
-		Background.Position = UDim2.new(0.109510086, 0, 0.381112367, 0)
-		Background.Size = UDim2.new(0.222958699, 0, 0.476163864, 0)
-		Background.Visible = false
-	
-		Walkspeedlb.Name = "Walkspeedlb"
-		Walkspeedlb.Parent = Background
-		Walkspeedlb.BackgroundColor3 = Color3.new(1, 1, 1)
-		Walkspeedlb.BackgroundTransparency = 1
-		Walkspeedlb.Position = UDim2.new(0, 0, 0.122436516, 0)
-		Walkspeedlb.Size = UDim2.new(0.999999762, 0, 0.100000001, 0)
-		Walkspeedlb.Visible = false
-		Walkspeedlb.Font = Enum.Font.SourceSans
-		Walkspeedlb.Text = "WalkSpeed:"
-		Walkspeedlb.TextColor3 = Color3.new(1, 1, 1)
-		Walkspeedlb.TextScaled = true
-		Walkspeedlb.TextSize = 14
-		Walkspeedlb.TextWrapped = true
-		Walkspeedlb.TextXAlignment = Enum.TextXAlignment.Left
-	
-		jumppowerlb.Name = "jumppowerlb"
-		jumppowerlb.Parent = Background
-		jumppowerlb.BackgroundColor3 = Color3.new(1, 1, 1)
-		jumppowerlb.BackgroundTransparency = 1
-		jumppowerlb.Position = UDim2.new(0, 0, 0.2203857, 0)
-		jumppowerlb.Size = UDim2.new(0.999999762, 0, 0.100000001, 0)
-		jumppowerlb.Visible = false
-		jumppowerlb.Font = Enum.Font.SourceSans
-		jumppowerlb.Text = "Jump Power:"
-		jumppowerlb.TextColor3 = Color3.new(1, 1, 1)
-		jumppowerlb.TextScaled = true
-		jumppowerlb.TextSize = 14
-		jumppowerlb.TextWrapped = true
-		jumppowerlb.TextXAlignment = Enum.TextXAlignment.Left
-	
-		speed.Name = "speed"
-		speed.Parent = Background
-		speed.BackgroundColor3 = Color3.new(1, 1, 1)
-		speed.BackgroundTransparency = 1
-		speed.Position = UDim2.new(0.577337444, 0, 0.122436516, 0)
-		speed.Size = UDim2.new(0.422662586, 0, 0.100000001, 0)
-		speed.Visible = false
-		speed.Font = Enum.Font.SourceSans
-		speed.Text = "Default"
-		speed.TextColor3 = Color3.new(1, 1, 1)
-		speed.TextScaled = true
-		speed.TextSize = 14
-		speed.TextWrapped = true
-	
-		jump.Name = "jump"
-		jump.Parent = Background
-		jump.BackgroundColor3 = Color3.new(1, 1, 1)
-		jump.BackgroundTransparency = 1
-		jump.Position = UDim2.new(0.659198582, 0, 0.22038573, 0)
-		jump.Size = UDim2.new(0.340801179, 0, 0.100000001, 0)
-		jump.Visible = false
-		jump.Font = Enum.Font.SourceSans
-		jump.Text = "Default"
-		jump.TextColor3 = Color3.new(1, 1, 1)
-		jump.TextScaled = true
-		jump.TextSize = 14
-		jump.TextWrapped = true
-	
-		WalkBox.Name = "WalkBox"
-		WalkBox.Parent = Background
-		WalkBox.BackgroundColor3 = Color3.new(0.333333, 0.333333, 0.333333)
-		WalkBox.BackgroundTransparency = 0.5
-		WalkBox.BorderSizePixel = 0
-		WalkBox.Position = UDim2.new(0, 0, 0.174571082, 0)
-		WalkBox.Size = UDim2.new(0.999999881, 0, 0.187969327, 0)
-		WalkBox.Font = Enum.Font.SourceSans
-		WalkBox.PlaceholderColor3 = Color3.new(1, 1, 1)
-		WalkBox.PlaceholderText = "Insert a number for walk speed"
-		WalkBox.Text = ""
-		WalkBox.TextColor3 = Color3.new(1, 1, 1)
-		WalkBox.TextScaled = true
-		WalkBox.TextSize = 14
-		WalkBox.TextWrapped = true
-	
-		JumpBox.Name = "JumpBox"
-		JumpBox.Parent = Background
-		JumpBox.BackgroundColor3 = Color3.new(0.333333, 0.333333, 0.333333)
-		JumpBox.BackgroundTransparency = 0.5
-		JumpBox.BorderSizePixel = 0
-		JumpBox.Position = UDim2.new(0.00430848775, 0, 0.6280002, 0)
-		JumpBox.Size = UDim2.new(0.999999881, 0, 0.190235019, 0)
-		JumpBox.Font = Enum.Font.SourceSans
-		JumpBox.PlaceholderColor3 = Color3.new(1, 1, 1)
-		JumpBox.PlaceholderText = "Insert a number for jump power"
-		JumpBox.Text = ""
-		JumpBox.TextColor3 = Color3.new(1, 1, 1)
-		JumpBox.TextScaled = true
-		JumpBox.TextSize = 14
-		JumpBox.TextWrapped = true
-	
-		WalkSumbit.Name = "WalkSumbit"
-		WalkSumbit.Parent = Background
-		WalkSumbit.BackgroundColor3 = Color3.new(0.0980392, 1, 0)
-		WalkSumbit.Position = UDim2.new(0.00430848775, 0, 0.402936816, 0)
-		WalkSumbit.Size = UDim2.new(0.995691121, 0, 0.155913889, 0)
-		WalkSumbit.Font = Enum.Font.SourceSans
-		WalkSumbit.Text = "Sumbit"
-		WalkSumbit.TextColor3 = Color3.new(0, 0, 0)
-		WalkSumbit.TextScaled = true
-		WalkSumbit.TextSize = 14
-		WalkSumbit.TextWrapped = true
-	
-		JumpSumbit.Name = "JumpSumbit"
-		JumpSumbit.Parent = Background
-		JumpSumbit.BackgroundColor3 = Color3.new(0.0980392, 1, 0)
-		JumpSumbit.Position = UDim2.new(0, 0, 0.84706986, 0)
-		JumpSumbit.Size = UDim2.new(0.995691121, 0, 0.151039571, 0)
-		JumpSumbit.Font = Enum.Font.SourceSans
-		JumpSumbit.Text = "Sumbit"
-		JumpSumbit.TextColor3 = Color3.new(0, 0, 0)
-		JumpSumbit.TextScaled = true
-		JumpSumbit.TextSize = 14
-		JumpSumbit.TextWrapped = true
-	
-		TextLabel.Parent = Background
-		TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-		TextLabel.BackgroundTransparency = 1
-		TextLabel.Size = UDim2.new(0.995690882, 0, 0.135462731, 0)
-		TextLabel.Font = Enum.Font.SourceSans
-		TextLabel.Text = "Created By DariuZzZ"
-		TextLabel.TextColor3 = Color3.new(1, 1, 1)
-		TextLabel.TextScaled = true
-		TextLabel.TextSize = 14
-		TextLabel.TextWrapped = true
-	
-		Open.Name = "Open"
-		Open.Parent = Hacks
-		Open.BackgroundColor3 = Color3.new(0, 0, 0)
-		Open.BackgroundTransparency = 0.44999998807907
-		Open.Position = UDim2.new(0, 0, 0.756052136, 0)
-		Open.Size = UDim2.new(0.100000001, 0, 0.0553072728, 0)
-		Open.Font = Enum.Font.SourceSans
-		Open.Text = "Open"
-		Open.TextColor3 = Color3.new(1, 1, 1)
-		Open.TextScaled = true
-		Open.TextSize = 14
-		Open.TextWrapped = true
-		-- Scripts:
-	
-		local playername = game.Players.LocalPlayer.Name
-		local player = game.Players.LocalPlayer
-		local character = game.Workspace[playername]
-		local Background = player.PlayerGui.Hacks.Background
-	
-		Open.MouseButton1Click:Connect(function()
-			if game.Players.LocalPlayer.PlayerGui.Hacks.Background.Visible == true then
-				game.Players.LocalPlayer.PlayerGui.Hacks.Open.Text = "Open"
-				game.Players.LocalPlayer.PlayerGui.Hacks.Background.Visible = false
-			else
-				game.Players.LocalPlayer.PlayerGui.Hacks.Open.Text = "Close"
-				game.Players.LocalPlayer.PlayerGui.Hacks.Background.Visible = true
-			end
-		end)
-	
-		WalkSumbit.MouseButton1Click:connect(function()
-			character.Humanoid.WalkSpeed = tostring(Background.WalkBox.Text)
-		end)
-	
-		JumpSumbit.MouseButton1Click:connect(function()
-			character.Humanoid.JumpPower = tostring(Background.JumpBox.Text)
-		end)
-		Print("Cheats Got Executed")
-	end
-	
-	script.Parent.Activated:Connect(testNumberOne)
-end
-coroutine.wrap(HTKHNIC_fake_script)()
-local function KIEI_fake_script() -- resetwalkspeed.LocalScript 
+local function SFCR_fake_script() -- resetwalkspeed.LocalScript 
 	local script = Instance.new('LocalScript', resetwalkspeed)
 
 	local player = game.Players.LocalPlayer
@@ -390,8 +272,8 @@ local function KIEI_fake_script() -- resetwalkspeed.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(KIEI_fake_script)()
-local function VRLVLQI_fake_script() -- walkspeed50.LocalScript 
+coroutine.wrap(SFCR_fake_script)()
+local function SDBYSN_fake_script() -- walkspeed50.LocalScript 
 	local script = Instance.new('LocalScript', walkspeed50)
 
 	local player = game.Players.LocalPlayer
@@ -402,8 +284,8 @@ local function VRLVLQI_fake_script() -- walkspeed50.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(VRLVLQI_fake_script)()
-local function BXMD_fake_script() -- walkspeed100.LocalScript 
+coroutine.wrap(SDBYSN_fake_script)()
+local function KAJNY_fake_script() -- walkspeed100.LocalScript 
 	local script = Instance.new('LocalScript', walkspeed100)
 
 	local player = game.Players.LocalPlayer
@@ -414,8 +296,8 @@ local function BXMD_fake_script() -- walkspeed100.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(BXMD_fake_script)()
-local function QMSUHM_fake_script() -- resetjumppower.LocalScript 
+coroutine.wrap(KAJNY_fake_script)()
+local function ENMT_fake_script() -- resetjumppower.LocalScript 
 	local script = Instance.new('LocalScript', resetjumppower)
 
 	local player = game.Players.LocalPlayer
@@ -426,8 +308,8 @@ local function QMSUHM_fake_script() -- resetjumppower.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(QMSUHM_fake_script)()
-local function FMYPUJM_fake_script() -- jumppower2x.LocalScript 
+coroutine.wrap(ENMT_fake_script)()
+local function GGAT_fake_script() -- jumppower2x.LocalScript 
 	local script = Instance.new('LocalScript', jumppower2x)
 
 	local player = game.Players.LocalPlayer
@@ -438,8 +320,8 @@ local function FMYPUJM_fake_script() -- jumppower2x.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(FMYPUJM_fake_script)()
-local function TZTN_fake_script() -- jumppower5x.LocalScript 
+coroutine.wrap(GGAT_fake_script)()
+local function BDBCN_fake_script() -- jumppower5x.LocalScript 
 	local script = Instance.new('LocalScript', jumppower5x)
 
 	local player = game.Players.LocalPlayer
@@ -450,8 +332,8 @@ local function TZTN_fake_script() -- jumppower5x.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(TZTN_fake_script)()
-local function LRMDOUH_fake_script() -- jumppower10x.LocalScript 
+coroutine.wrap(BDBCN_fake_script)()
+local function THUYUGB_fake_script() -- jumppower10x.LocalScript 
 	local script = Instance.new('LocalScript', jumppower10x)
 
 	local player = game.Players.LocalPlayer
@@ -462,14 +344,349 @@ local function LRMDOUH_fake_script() -- jumppower10x.LocalScript
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(LRMDOUH_fake_script)()
-local function VAVPOY_fake_script() -- flingscript.LocalScript 
-	local script = Instance.new('LocalScript', flingscript)
+coroutine.wrap(THUYUGB_fake_script)()
+local function UTLUNU_fake_script() -- controlclicktp.LocalScript 
+	local script = Instance.new('LocalScript', controlclicktp)
 
 	function testNumberOne()
-		loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+		local UIS = game:GetService("UserInputService")
+	
+		local Player = game.Players.LocalPlayer
+		local Mouse = Player:GetMouse()
+	
+	
+		function GetCharacter()
+			return game.Players.LocalPlayer.Character
+		end
+	
+		function Teleport(pos)
+			local Char = GetCharacter()
+			if Char then
+				Char:MoveTo(pos)
+			end
+		end
+	
+	
+		UIS.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 and UIS:IsKeyDown(Enum.KeyCode.LeftControl) then
+				Teleport(Mouse.Hit.p)
+			end
+		end)
 	end
 	
 	script.Parent.Activated:Connect(testNumberOne)
 end
-coroutine.wrap(VAVPOY_fake_script)()
+coroutine.wrap(UTLUNU_fake_script)()
+local function UIKVDS_fake_script() -- closemodmenu.LocalScript 
+	local script = Instance.new('LocalScript', closemodmenu)
+
+	local frame = script.Parent.Parent.Parent:WaitForChild('toggle mod menu')
+	script.Parent.MouseButton1Click:connect(function()
+		frame.Visible = not frame.Visible
+	end)
+	local frame = script.Parent.Parent.Parent:WaitForChild('Frame')
+	script.Parent.MouseButton1Click:connect(function()
+		frame.Visible = not frame.Visible
+	end)
+end
+coroutine.wrap(UIKVDS_fake_script)()
+local function QWZZVY_fake_script() -- fly.LocalScript 
+	local script = Instance.new('LocalScript', fly)
+
+	function testNumberOne()
+		-- Bring to you by 7alexv7
+		-- Enjoy the script!
+	
+		-- Instances:
+	
+		local FlyGui = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local TextButton = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
+	
+		--Properties:
+	
+		FlyGui.Name = "FlyGui"
+		FlyGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	
+		Frame.Parent = FlyGui
+		Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0.0685602352, 0, 0.168769717, 0)
+		Frame.Size = UDim2.new(0.264544547, 0, 0.100000024, 0)
+	
+		TextButton.Parent = Frame
+		TextButton.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+		TextButton.BorderSizePixel = 0
+		TextButton.Position = UDim2.new(0.06324628, 0, 0.400667697, 0)
+		TextButton.Size = UDim2.new(0.871157169, 0, 0.495614201, 0)
+		TextButton.Font = Enum.Font.ArialBold
+		TextButton.Text = "Fly"
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextScaled = true
+		TextButton.TextSize = 14.000
+		TextButton.TextStrokeTransparency = 0.000
+		TextButton.TextWrapped = true
+	
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.Size = UDim2.new(0, 86, 0, 24)
+		TextLabel.Font = Enum.Font.Oswald
+		TextLabel.Text = "Made by 7alexv7"
+		TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel.TextScaled = true
+		TextLabel.TextSize = 14.000
+		TextLabel.TextWrapped = true
+	
+		-- Scripts:
+	
+		local function NQWSTGE_fake_script() -- Frame.Fly 
+			local script = Instance.new('LocalScript', Frame)
+	
+			local plr = script.Parent.Parent.Parent.Parent
+			repeat wait() until plr and plr.Character and plr.Character:findFirstChild("HumanoidRootPart") and plr.Character:findFirstChild("Humanoid") 
+			local mouse = game.Players.LocalPlayer:GetMouse()  
+			repeat wait() until mouse
+	
+			local torso = plr.Character.HumanoidRootPart 
+			local flying = false
+			local deb = true 
+			local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+			local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+			local maxspeed = 1000 
+			local speed = 50
+			function Fly() 
+				local bg = Instance.new("BodyGyro", torso) 
+				bg.P = 9e4 
+				bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+				bg.cframe = torso.CFrame 
+				local bv = Instance.new("BodyVelocity", torso) 
+				bv.velocity = Vector3.new(0,0.1,0) 
+				bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+				repeat wait() 
+					plr.Character.Humanoid.PlatformStand = true 
+					if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+						speed = speed+.5+(speed/maxspeed) 
+						if speed > maxspeed then 
+							speed = maxspeed 
+						end 
+					elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+						speed = speed-1 
+						if speed < 0 then 
+							speed = 0
+						else
+							speed = 50
+						end 
+					end 
+					if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+						lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+					elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+						bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+					else 
+						bv.velocity = Vector3.new(0,0.1,0) 
+					end 
+					bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+				until not flying 
+				ctrl = {f = 0, b = 0, l = 0, r = 0} 
+				lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+	
+				bg:Destroy() 
+				bv:Destroy() 
+				plr.Character.Humanoid.PlatformStand = false 
+				speed = 50
+			end 
+	
+			mouse.KeyDown:connect(function(key) 
+				if key:lower() == "e" then 
+					if flying then flying = false 
+						speed = 50
+					else 
+						flying = true 
+						Fly()
+	
+					end 
+				elseif key:lower() == "w" then 
+					ctrl.f = 1 
+				elseif key:lower() == "s" then 
+					ctrl.b = -1 
+				elseif key:lower() == "a" then 
+					ctrl.l = -1 
+				elseif key:lower() == "d" then 
+					ctrl.r = 1 
+				end 
+			end) 
+			mouse.KeyUp:connect(function(key) 
+				if key:lower() == "w" then 
+					ctrl.f = 0 
+				elseif key:lower() == "s" then 
+					ctrl.b = 0 
+				elseif key:lower() == "a" then 
+					ctrl.l = 0 
+				elseif key:lower() == "d" then 
+					ctrl.r = 0 
+				end 
+			end)
+	
+			plr.Character.Humanoid.StateChanged:Connect(function(o,n)
+				if n == Enum.HumanoidStateType.Running then
+					ctrl.f = 1
+				else
+					ctrl.f = 0
+				end
+	
+			end)
+			script.Parent.TextButton.MouseButton1Click:Connect(function()
+				if flying then
+					flying = false
+					speed = 50
+				else
+					flying = true
+					Fly()
+				end
+			end)
+	
+		end
+		coroutine.wrap(NQWSTGE_fake_script)()
+		local function RAQA_fake_script() -- Frame.Buttons 
+			local script = Instance.new('LocalScript', Frame)
+	
+			local Trigger = script.Parent.MiniTrext
+			local IsMini = false
+			function CreateTween(Instance,Style,Direction,Time,table,RepeatCount,CanRepeat,Delay)
+				local ts = game:GetService("TweenService")
+				local TweenInfo = TweenInfo.new(Time,Style,Direction,RepeatCount,CanRepeat,Delay)
+				local Tween = ts:Create(Instance,TweenInfo,table)
+				repeat wait() until Tween ~= nil
+				return Tween
+	
+			end
+			Trigger.MouseButton1Click:Connect(function()
+				if IsMini then
+					CreateTween(script.Parent,Enum.EasingStyle.Quad,Enum.EasingDirection.Out,0.5,{Size = UDim2.new(0.265, 0,0.1, 0)},0,false,0.1):Play()
+					IsMini = false
+					Trigger.Text = "-"
+				else
+					CreateTween(script.Parent,Enum.EasingStyle.Quad,Enum.EasingDirection.Out,0.5,{Size = UDim2.new(0.265, 0,0.042, 0)},0,false,0.1):Play()
+					IsMini = true
+					Trigger.Text = "+"
+				end
+			end)
+			script.Parent.Delete.MouseButton1Click:Connect(function()
+				script.Parent.Parent:Destroy()
+			end)
+		end
+		coroutine.wrap(RAQA_fake_script)()
+		local function TKVUMP_fake_script() -- Frame.Drag Gui 
+			local script = Instance.new('LocalScript', Frame)
+	
+			local UserInputService = game:GetService("UserInputService")
+	
+			local gui = script.Parent
+	
+			local dragging
+			local dragInput
+			local dragStart
+			local startPos
+	
+			local function update(input)
+				local delta = input.Position - dragStart
+				gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			end
+	
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+	
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+	
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+	
+			UserInputService.InputChanged:Connect(function(input)
+				if input == dragInput and dragging then
+					update(input)
+				end
+			end)
+		end
+		coroutine.wrap(TKVUMP_fake_script)()
+	end
+	
+	script.Parent.Activated:Connect(testNumberOne)
+end
+coroutine.wrap(QWZZVY_fake_script)()
+local function YWZAO_fake_script() -- invisibleheadon.LocalScript 
+	local script = Instance.new('LocalScript', invisibleheadon)
+
+	function testNumberOne()
+		game.Players.LocalPlayer.Character.Head.Transparency = 1
+	end
+	
+	script.Parent.Activated:Connect(testNumberOne)
+end
+coroutine.wrap(YWZAO_fake_script)()
+local function DFWDBYI_fake_script() -- invisibleheadoff.LocalScript 
+	local script = Instance.new('LocalScript', invisibleheadoff)
+
+	function testNumberOne()
+		game.Players.LocalPlayer.Character.Head.Transparency = 0
+	end
+	
+	script.Parent.Activated:Connect(testNumberOne)
+end
+coroutine.wrap(DFWDBYI_fake_script)()
+local function SGZRI_fake_script() -- setwalkspeed.LocalScript 
+	local script = Instance.new('LocalScript', setwalkspeed)
+
+	local player = game.Players.LocalPlayer
+	
+	function testNumberOne()
+		walkspeed = script.Parent.Parent.walkspeed.ContentText
+		player.Character.Humanoid.WalkSpeed = walkspeed
+	end
+	
+	script.Parent.Activated:Connect(testNumberOne)
+end
+coroutine.wrap(SGZRI_fake_script)()
+local function GBSCAQ_fake_script() -- setjumppower.LocalScript 
+	local script = Instance.new('LocalScript', setjumppower)
+
+	local player = game.Players.LocalPlayer
+	
+	function testNumberOne()
+		jumppower = script.Parent.Parent.jumppower.ContentText
+		player.Character.Humanoid.JumpPower = jumppower
+	end
+	
+	script.Parent.Activated:Connect(testNumberOne)
+end
+coroutine.wrap(GBSCAQ_fake_script)()
+local function KVGP_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	frame = script.Parent.Parent.Frame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(KVGP_fake_script)()
+local function ATUIORL_fake_script() -- togglemodmenu.LocalScript 
+	local script = Instance.new('LocalScript', togglemodmenu)
+
+	local frame = script.Parent.Parent:WaitForChild('Frame')
+	script.Parent.MouseButton1Click:connect(function()
+		frame.Visible = not frame.Visible
+	end)
+end
+coroutine.wrap(ATUIORL_fake_script)()
