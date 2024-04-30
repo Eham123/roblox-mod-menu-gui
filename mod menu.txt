@@ -4,11 +4,6 @@
 --loadstring(game:HttpGet('https://raw.githubusercontent.com/Eham123/roblox-mod-menu-gui/main/mod%20menu.txt')()
 
 
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local modmenu = Instance.new("Folder")
 local Frame = Instance.new("Frame")
 local resetwalkspeed = Instance.new("TextButton")
@@ -30,7 +25,6 @@ local setjumppower = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local togglemodmenu = Instance.new("TextButton")
 
---Properties:
 
 modmenu.Name = "mod menu"
 modmenu.Parent = game.StarterGui.ScreenGui
@@ -259,7 +253,6 @@ togglemodmenu.Text = "Toggle Menu"
 togglemodmenu.TextColor3 = Color3.fromRGB(0, 0, 0)
 togglemodmenu.TextSize = 14.000
 
--- Scripts:
 
 local function SFCR_fake_script() -- resetwalkspeed.LocalScript 
 	local script = Instance.new('LocalScript', resetwalkspeed)
@@ -377,7 +370,7 @@ local function UTLUNU_fake_script() -- controlclicktp.LocalScript
 	script.Parent.Activated:Connect(testNumberOne)
 end
 coroutine.wrap(UTLUNU_fake_script)()
-local function UIKVDS_fake_script() -- closemodmenu.LocalScript 
+local function UIKVDS_fake_script()
 	local script = Instance.new('LocalScript', closemodmenu)
 
 	local frame = script.Parent.Parent.Parent:WaitForChild('toggle mod menu')
@@ -390,21 +383,15 @@ local function UIKVDS_fake_script() -- closemodmenu.LocalScript
 	end)
 end
 coroutine.wrap(UIKVDS_fake_script)()
-local function QWZZVY_fake_script() -- fly.LocalScript 
+local function QWZZVY_fake_script()
 	local script = Instance.new('LocalScript', fly)
 
 	function testNumberOne()
-		-- Bring to you by 7alexv7
-		-- Enjoy the script!
-	
-		-- Instances:
 	
 		local FlyGui = Instance.new("ScreenGui")
 		local Frame = Instance.new("Frame")
 		local TextButton = Instance.new("TextButton")
 		local TextLabel = Instance.new("TextLabel")
-	
-		--Properties:
 	
 		FlyGui.Name = "FlyGui"
 		FlyGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -437,8 +424,6 @@ local function QWZZVY_fake_script() -- fly.LocalScript
 		TextLabel.TextScaled = true
 		TextLabel.TextSize = 14.000
 		TextLabel.TextWrapped = true
-	
-		-- Scripts:
 	
 		local function NQWSTGE_fake_script() -- Frame.Fly 
 			local script = Instance.new('LocalScript', Frame)
@@ -659,7 +644,7 @@ local function SGZRI_fake_script() -- setwalkspeed.LocalScript
 	script.Parent.Activated:Connect(testNumberOne)
 end
 coroutine.wrap(SGZRI_fake_script)()
-local function GBSCAQ_fake_script() -- setjumppower.LocalScript 
+local function GBSCAQ_fake_script()
 	local script = Instance.new('LocalScript', setjumppower)
 
 	local player = game.Players.LocalPlayer
@@ -672,7 +657,7 @@ local function GBSCAQ_fake_script() -- setjumppower.LocalScript
 	script.Parent.Activated:Connect(testNumberOne)
 end
 coroutine.wrap(GBSCAQ_fake_script)()
-local function KVGP_fake_script() -- Frame.Script 
+local function KVGP_fake_script()
 	local script = Instance.new('Script', Frame)
 
 	frame = script.Parent.Parent.Frame
