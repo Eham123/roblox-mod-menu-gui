@@ -9,6 +9,11 @@
 
 -- Instances:
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local targetname = Instance.new("TextBox")
@@ -28,6 +33,8 @@ local touchfling = Instance.new("TextButton")
 local iy = Instance.new("TextButton")
 local lcl = Instance.new("TextBox")
 local run = Instance.new("TextButton")
+local ballsize = Instance.new("TextBox")
+local ttmdelay = Instance.new("TextBox")
 
 --Properties:
 
@@ -164,8 +171,8 @@ ball.Parent = Frame
 ball.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 ball.BorderColor3 = Color3.fromRGB(50, 50, 50)
 ball.BorderSizePixel = 4
-ball.Position = UDim2.new(0.513157904, 0, 0.487179488, 0)
-ball.Size = UDim2.new(0, 65, 0, 28)
+ball.Position = UDim2.new(0.513157904, 0, 0.487179548, 0)
+ball.Size = UDim2.new(0, 65, 0, 10)
 ball.Font = Enum.Font.SourceSans
 ball.Text = "FE Ball"
 ball.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -176,8 +183,8 @@ flingtool.Parent = Frame
 flingtool.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 flingtool.BorderColor3 = Color3.fromRGB(50, 50, 50)
 flingtool.BorderSizePixel = 4
-flingtool.Position = UDim2.new(0.763157904, 0, 0.487179488, 0)
-flingtool.Size = UDim2.new(0, 65, 0, 28)
+flingtool.Position = UDim2.new(0.763157904, 0, 0.487179548, 0)
+flingtool.Size = UDim2.new(0, 65, 0, 10)
 flingtool.Font = Enum.Font.SourceSans
 flingtool.Text = "Fling Tool"
 flingtool.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -232,9 +239,35 @@ run.Text = "Run"
 run.TextColor3 = Color3.fromRGB(0, 0, 0)
 run.TextSize = 14.000
 
+ballsize.Name = "ballsize"
+ballsize.Parent = Frame
+ballsize.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+ballsize.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ballsize.BorderSizePixel = 4
+ballsize.Position = UDim2.new(0.513157904, 0, 0.570106983, 0)
+ballsize.Size = UDim2.new(0, 65, 0, 11)
+ballsize.Font = Enum.Font.SourceSans
+ballsize.PlaceholderText = "Ball size"
+ballsize.Text = "5.7"
+ballsize.TextColor3 = Color3.fromRGB(0, 0, 0)
+ballsize.TextSize = 14.000
+
+ttmdelay.Name = "ttmdelay"
+ttmdelay.Parent = Frame
+ttmdelay.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+ttmdelay.BorderColor3 = Color3.fromRGB(50, 50, 50)
+ttmdelay.BorderSizePixel = 4
+ttmdelay.Position = UDim2.new(0.763157904, 0, 0.570106983, 0)
+ttmdelay.Size = UDim2.new(0, 65, 0, 11)
+ttmdelay.Font = Enum.Font.SourceSans
+ttmdelay.PlaceholderText = "TTM delay"
+ttmdelay.Text = "0.00000000000001"
+ttmdelay.TextColor3 = Color3.fromRGB(0, 0, 0)
+ttmdelay.TextSize = 14.000
+
 -- Scripts:
 
-local function DWKI_fake_script() -- Frame.draggable script 
+local function BRERIYL_fake_script() -- Frame.draggable script 
 	local script = Instance.new('Script', Frame)
 
 	frame = script.Parent.Parent.Frame
@@ -242,8 +275,8 @@ local function DWKI_fake_script() -- Frame.draggable script
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(DWKI_fake_script)()
-local function IHZVAEU_fake_script() -- goto.LocalScript 
+coroutine.wrap(BRERIYL_fake_script)()
+local function ARWN_fake_script() -- goto.LocalScript 
 	local script = Instance.new('LocalScript', goto)
 
 	function func()
@@ -252,8 +285,8 @@ local function IHZVAEU_fake_script() -- goto.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(IHZVAEU_fake_script)()
-local function QRQWPC_fake_script() -- annoy.LocalScript 
+coroutine.wrap(ARWN_fake_script)()
+local function ROBBBU_fake_script() -- annoy.LocalScript 
 	local script = Instance.new('LocalScript', annoy)
 
 	function func()
@@ -265,8 +298,8 @@ local function QRQWPC_fake_script() -- annoy.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(QRQWPC_fake_script)()
-local function DECCBIN_fake_script() -- killscripts.LocalScript 
+coroutine.wrap(ROBBBU_fake_script)()
+local function JHDF_fake_script() -- killscripts.LocalScript 
 	local script = Instance.new('LocalScript', killscripts)
 
 	function func()
@@ -275,27 +308,27 @@ local function DECCBIN_fake_script() -- killscripts.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(DECCBIN_fake_script)()
-local function UXAEBXF_fake_script() -- noclip.LocalScript 
+coroutine.wrap(JHDF_fake_script)()
+local function QNTP_fake_script() -- noclip.LocalScript 
 	local script = Instance.new('LocalScript', noclip)
 
 	function func()
-		c = game.Players.LocalPlayer.Character
-		h = c.Humanoid
-		if h.RigType == Enum.HumanoidRigType.R6 then
-			c.Torso.CanCollide = false
-			c["Left Leg"].CanCollide = false
-			c["Right Leg"].CanCollide = false
-		elseif h.RigType == Enum.HumanoidRigType.R15 then
-			c.UpperTorso.CanCollide = false
-			c.LowerTorso.CanCollide = false
+		if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+			game.Players.LocalPlayer.Character.Torso.CanCollide = false
+			game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+			game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+		elseif game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+			game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
 		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
 	end
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(UXAEBXF_fake_script)()
-local function VYSN_fake_script() -- close.LocalScript 
+coroutine.wrap(QNTP_fake_script)()
+local function BGRXL_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	function func()
@@ -304,8 +337,8 @@ local function VYSN_fake_script() -- close.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(VYSN_fake_script)()
-local function PXULOLI_fake_script() -- btools.LocalScript 
+coroutine.wrap(BGRXL_fake_script)()
+local function AZVNZ_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	function func()
@@ -346,8 +379,8 @@ local function PXULOLI_fake_script() -- btools.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(PXULOLI_fake_script)()
-local function EAFGTDG_fake_script() -- fejetpack.LocalScript 
+coroutine.wrap(AZVNZ_fake_script)()
+local function WYBPZX_fake_script() -- fejetpack.LocalScript 
 	local script = Instance.new('LocalScript', fejetpack)
 
 	function func()
@@ -397,13 +430,13 @@ local function EAFGTDG_fake_script() -- fejetpack.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(EAFGTDG_fake_script)()
-local function SZEJLAE_fake_script() -- ball.LocalScript 
+coroutine.wrap(WYBPZX_fake_script)()
+local function GFGCRRF_fake_script() -- ball.LocalScript 
 	local script = Instance.new('LocalScript', ball)
 
 	function func()
 		m = 1.5
-		s = 5.7
+		s = script.Parent.Parent.ballsize.Text
 		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
 		ball = Instance.new("Part")
 		ball.Name = "PlayerBall"
@@ -416,6 +449,7 @@ local function SZEJLAE_fake_script() -- ball.LocalScript
 		weld.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 		weld.Part0 = game.Players.LocalPlayer.Character.HumanoidRootPart
 		weld.Part1 = ball
+		game.Workspace.Camera.CameraSubject = ball
 		while 1 do
 			if game.UserInputService:IsKeyDown("W") then
 				ball.RotVelocity -= Vector3.new(game.Workspace.Camera.CFrame.RightVector.X * m, 0, game.Workspace.Camera.CFrame.RightVector.Z * m)
@@ -435,15 +469,15 @@ local function SZEJLAE_fake_script() -- ball.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(SZEJLAE_fake_script)()
-local function DZFG_fake_script() -- flingtool.LocalScript 
+coroutine.wrap(GFGCRRF_fake_script)()
+local function RNHZLXZ_fake_script() -- flingtool.LocalScript 
 	local script = Instance.new('LocalScript', flingtool)
 
 	function func()
 		--Variables
 	
 		force = 10000
-		waittime = 0.0001
+		waittime = script.Parent.Parent.ttmdelay.Text
 		ct = .5
 	
 		lp = game.Players.LocalPlayer
@@ -621,8 +655,8 @@ local function DZFG_fake_script() -- flingtool.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(DZFG_fake_script)()
-local function ICZFA_fake_script() -- touchfling.LocalScript 
+coroutine.wrap(RNHZLXZ_fake_script)()
+local function ZQMA_fake_script() -- touchfling.LocalScript 
 	local script = Instance.new('LocalScript', touchfling)
 
 	function func()
@@ -746,8 +780,8 @@ local function ICZFA_fake_script() -- touchfling.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(ICZFA_fake_script)()
-local function XAKPH_fake_script() -- iy.LocalScript 
+coroutine.wrap(ZQMA_fake_script)()
+local function ZZLIKJ_fake_script() -- iy.LocalScript 
 	local script = Instance.new('LocalScript', iy)
 
 	function func()
@@ -756,8 +790,8 @@ local function XAKPH_fake_script() -- iy.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(XAKPH_fake_script)()
-local function PEMYD_fake_script() -- run.LocalScript 
+coroutine.wrap(ZZLIKJ_fake_script)()
+local function KCKXK_fake_script() -- run.LocalScript 
 	local script = Instance.new('LocalScript', run)
 
 	function func()
@@ -766,4 +800,4 @@ local function PEMYD_fake_script() -- run.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(PEMYD_fake_script)()
+coroutine.wrap(KCKXK_fake_script)()
