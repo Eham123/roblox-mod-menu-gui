@@ -1,13 +1,9 @@
---made by rabybabybumpers2 on roblox
---discord Eham#5756 for update requests
---current version 1.0
---loadstring(game:HttpGet("https://raw.githubusercontent.com/Eham123/roblox-mod-menu-gui/main/mod%20menu.txt"))()
-
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+--[
+made by rabybabybumpers2 on roblox
+discord Eham#5756 for update requests
+current version 1.0
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Eham123/roblox-mod-menu-gui/main/mod%20menu.txt"))()
+]--
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -26,8 +22,6 @@ local ball = Instance.new("TextButton")
 local flingtool = Instance.new("TextButton")
 local touchfling = Instance.new("TextButton")
 local iy = Instance.new("TextButton")
-
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -205,9 +199,7 @@ iy.Text = "Infinite Yield"
 iy.TextColor3 = Color3.fromRGB(0, 0, 0)
 iy.TextSize = 14.000
 
--- Scripts:
-
-local function XKYUB_fake_script() -- Frame.draggable script 
+local function XKYUB_fake_script()
 	local script = Instance.new('Script', Frame)
 
 	frame = script.Parent.Parent.Frame
@@ -216,7 +208,7 @@ local function XKYUB_fake_script() -- Frame.draggable script
 	frame.Selectable = true
 end
 coroutine.wrap(XKYUB_fake_script)()
-local function YBUJEDX_fake_script() -- goto.LocalScript 
+local function YBUJEDX_fake_script()
 	local script = Instance.new('LocalScript', goto)
 
 	function func()
@@ -226,7 +218,7 @@ local function YBUJEDX_fake_script() -- goto.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(YBUJEDX_fake_script)()
-local function LIFJY_fake_script() -- annoy.LocalScript 
+local function LIFJY_fake_script()
 	local script = Instance.new('LocalScript', annoy)
 
 	function func()
@@ -268,7 +260,7 @@ local function ODFHUMG_fake_script() -- noclip.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(ODFHUMG_fake_script)()
-local function IMLV_fake_script() -- close.LocalScript 
+local function IMLV_fake_script()
 	local script = Instance.new('LocalScript', close)
 
 	function func()
@@ -278,7 +270,7 @@ local function IMLV_fake_script() -- close.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(IMLV_fake_script)()
-local function ORMPXRX_fake_script() -- btools.LocalScript 
+local function ORMPXRX_fake_script()
 	local script = Instance.new('LocalScript', btools)
 
 	function func()
@@ -320,7 +312,7 @@ local function ORMPXRX_fake_script() -- btools.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(ORMPXRX_fake_script)()
-local function ITQSDCM_fake_script() -- fejetpack.LocalScript 
+local function ITQSDCM_fake_script()
 	local script = Instance.new('LocalScript', fejetpack)
 
 	function func()
@@ -371,7 +363,7 @@ local function ITQSDCM_fake_script() -- fejetpack.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(ITQSDCM_fake_script)()
-local function ROMLEY_fake_script() -- ball.LocalScript 
+local function ROMLEY_fake_script()
 	local script = Instance.new('LocalScript', ball)
 
 	function func()
@@ -409,7 +401,7 @@ local function ROMLEY_fake_script() -- ball.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(ROMLEY_fake_script)()
-local function GBZWGX_fake_script() -- flingtool.LocalScript 
+local function GBZWGX_fake_script()
 	local script = Instance.new('LocalScript', flingtool)
 
 	function func()
@@ -442,7 +434,7 @@ local function GBZWGX_fake_script() -- flingtool.LocalScript
 			c.UpperTorso.CanCollide = false
 			c.LowerTorso.CanCollide = false
 		end
-	
+
 		--Creating tool
 	
 		tool = Instance.new("Tool")
@@ -595,7 +587,7 @@ local function GBZWGX_fake_script() -- flingtool.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(GBZWGX_fake_script)()
-local function KEFYYY_fake_script() -- touchfling.LocalScript 
+local function KEFYYY_fake_script()
 	local script = Instance.new('LocalScript', touchfling)
 
 	function func()
@@ -611,8 +603,6 @@ local function KEFYYY_fake_script() -- touchfling.LocalScript
 		local Frame_2 = Instance.new("Frame")
 		local TextLabel = Instance.new("TextLabel")
 		local TextButton = Instance.new("TextButton")
-	
-		--Properties:
 	
 		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -654,10 +644,9 @@ local function KEFYYY_fake_script() -- touchfling.LocalScript
 		TextButton.Text = "OFF"
 		TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 		TextButton.TextSize = 20.000
+
 	
-		-- Scripts:
-	
-		local function IIMAWH_fake_script() -- TextButton.LocalScript 
+		local function IIMAWH_fake_script()
 			local script = Instance.new('LocalScript', TextButton)
 	
 			local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -708,7 +697,7 @@ local function KEFYYY_fake_script() -- touchfling.LocalScript
 	
 		end
 		coroutine.wrap(IIMAWH_fake_script)()
-		local function QCJQJL_fake_script() -- Frame.LocalScript 
+		local function QCJQJL_fake_script()
 			local script = Instance.new('LocalScript', Frame)
 	
 			script.Parent.Active = true
@@ -720,7 +709,7 @@ local function KEFYYY_fake_script() -- touchfling.LocalScript
 	script.Parent.Activated:Connect(func)
 end
 coroutine.wrap(KEFYYY_fake_script)()
-local function UFHD_fake_script() -- iy.LocalScript 
+local function UFHD_fake_script()
 	local script = Instance.new('LocalScript', iy)
 
 	function func()
