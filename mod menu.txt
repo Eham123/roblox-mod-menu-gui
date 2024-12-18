@@ -445,6 +445,12 @@ local function GFGCRRF_fake_script() -- ball.LocalScript
 		ball.Transparency = 0.5
 		ball.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		ball.Parent = game.Workspace
+		cp = PhysicalProperties.new(
+		0.5,
+		1,
+		0.6
+		)
+		ball.CustomPhysicalProperties = cp
 		weld = Instance.new("WeldConstraint")
 		weld.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 		weld.Part0 = game.Players.LocalPlayer.Character.HumanoidRootPart
