@@ -391,18 +391,6 @@ local function WYBPZX_fake_script() -- fejetpack.LocalScript
 		part.CanCollide = false
 		part.Transparency = 1
 		part.Parent = game.Workspace
-	
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame
-		jetpack = Instance.new("Part")
-		jetpack.Size = Vector3.new(2, 2, 1)
-		jetpack.CanCollide = false
-		jetpack.Parent = game.Workspace
-		jetpack.Position = Vector3.new(0, 5.5, 1)
-		
-		weld = Instance.new("WeldConstraint")
-		weld.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-		weld.Part0 = game.Players.LocalPlayer.Character.HumanoidRootPart
-		weld.Part1 = jetpack
 		
 		tool = Instance.new("Tool")
 		
@@ -414,8 +402,6 @@ local function WYBPZX_fake_script() -- fejetpack.LocalScript
 		handle.Name = "Handle"
 		handle.Size = Vector3.new(1, 1, 1)
 		handle.Parent = tool
-		
-		game.Players.LocalPlayer:GetMouse().TargetFilter = jetpack
 	
 		tool.Activated:Connect(function()
 			game.Workspace.rabybabybumpers2["International Fedora"].Handle.SpecialMesh:Destroy()
