@@ -29,6 +29,7 @@ local iy = Instance.new("TextButton")
 local telekinesis = Instance.new("TextButton")
 local ballsize = Instance.new("TextBox")
 local ttmdelay = Instance.new("TextBox")
+local movepart = Instance.new("TextButton")
 
 --Properties:
 
@@ -246,9 +247,21 @@ ttmdelay.Text = "0.00000000000001"
 ttmdelay.TextColor3 = Color3.fromRGB(0, 0, 0)
 ttmdelay.TextSize = 14.000
 
+movepart.Name = "move part"
+movepart.Parent = Frame
+movepart.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+movepart.BorderColor3 = Color3.fromRGB(50, 50, 50)
+movepart.BorderSizePixel = 4
+movepart.Position = UDim2.new(0.269736856, 0, 0.802546263, 0)
+movepart.Size = UDim2.new(0, 65, 0, 28)
+movepart.Font = Enum.Font.SourceSans
+movepart.Text = "Move Part"
+movepart.TextColor3 = Color3.fromRGB(0, 0, 0)
+movepart.TextSize = 14.000
+
 -- Scripts:
 
-local function DWXTA_fake_script() -- Frame.draggable script 
+local function ZQFP_fake_script() -- Frame.draggable script 
 	local script = Instance.new('Script', Frame)
 
 	frame = script.Parent.Parent.Frame
@@ -256,8 +269,8 @@ local function DWXTA_fake_script() -- Frame.draggable script
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(DWXTA_fake_script)()
-local function MIXULCD_fake_script() -- goto.LocalScript 
+coroutine.wrap(ZQFP_fake_script)()
+local function TXUHC_fake_script() -- goto.LocalScript 
 	local script = Instance.new('LocalScript', goto)
 
 	function func()
@@ -266,8 +279,8 @@ local function MIXULCD_fake_script() -- goto.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(MIXULCD_fake_script)()
-local function UYCEA_fake_script() -- annoy.LocalScript 
+coroutine.wrap(TXUHC_fake_script)()
+local function KETTLDA_fake_script() -- annoy.LocalScript 
 	local script = Instance.new('LocalScript', annoy)
 
 	function func()
@@ -279,8 +292,8 @@ local function UYCEA_fake_script() -- annoy.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(UYCEA_fake_script)()
-local function SPPON_fake_script() -- killscripts.LocalScript 
+coroutine.wrap(KETTLDA_fake_script)()
+local function BLNADIU_fake_script() -- killscripts.LocalScript 
 	local script = Instance.new('LocalScript', killscripts)
 
 	function func()
@@ -289,8 +302,8 @@ local function SPPON_fake_script() -- killscripts.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(SPPON_fake_script)()
-local function BMQGL_fake_script() -- noclip.LocalScript 
+coroutine.wrap(BLNADIU_fake_script)()
+local function BFXR_fake_script() -- noclip.LocalScript 
 	local script = Instance.new('LocalScript', noclip)
 
 	function func()
@@ -308,8 +321,8 @@ local function BMQGL_fake_script() -- noclip.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(BMQGL_fake_script)()
-local function GUKX_fake_script() -- close.LocalScript 
+coroutine.wrap(BFXR_fake_script)()
+local function DUTUIO_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	function func()
@@ -318,8 +331,8 @@ local function GUKX_fake_script() -- close.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(GUKX_fake_script)()
-local function VLSPW_fake_script() -- btools.LocalScript 
+coroutine.wrap(DUTUIO_fake_script)()
+local function XVRSDJ_fake_script() -- btools.LocalScript 
 	local script = Instance.new('LocalScript', btools)
 
 	function func()
@@ -360,8 +373,8 @@ local function VLSPW_fake_script() -- btools.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(VLSPW_fake_script)()
-local function LLWVI_fake_script() -- fejetpack.LocalScript 
+coroutine.wrap(XVRSDJ_fake_script)()
+local function UXFTJT_fake_script() -- fejetpack.LocalScript 
 	local script = Instance.new('LocalScript', fejetpack)
 
 	function func()
@@ -411,8 +424,8 @@ local function LLWVI_fake_script() -- fejetpack.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(LLWVI_fake_script)()
-local function CRKLI_fake_script() -- ball.LocalScript 
+coroutine.wrap(UXFTJT_fake_script)()
+local function GYCJPCO_fake_script() -- ball.LocalScript 
 	local script = Instance.new('LocalScript', ball)
 
 	function func()
@@ -450,8 +463,8 @@ local function CRKLI_fake_script() -- ball.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(CRKLI_fake_script)()
-local function WEAWDF_fake_script() -- flingtool.LocalScript 
+coroutine.wrap(GYCJPCO_fake_script)()
+local function BWROBC_fake_script() -- flingtool.LocalScript 
 	local script = Instance.new('LocalScript', flingtool)
 
 	function func()
@@ -636,8 +649,8 @@ local function WEAWDF_fake_script() -- flingtool.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(WEAWDF_fake_script)()
-local function KABB_fake_script() -- touchfling.LocalScript 
+coroutine.wrap(BWROBC_fake_script)()
+local function UIQEHI_fake_script() -- touchfling.LocalScript 
 	local script = Instance.new('LocalScript', touchfling)
 
 	function func()
@@ -761,8 +774,8 @@ local function KABB_fake_script() -- touchfling.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(KABB_fake_script)()
-local function OFOWJZ_fake_script() -- iy.LocalScript 
+coroutine.wrap(UIQEHI_fake_script)()
+local function QQPZ_fake_script() -- iy.LocalScript 
 	local script = Instance.new('LocalScript', iy)
 
 	function func()
@@ -771,8 +784,8 @@ local function OFOWJZ_fake_script() -- iy.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(OFOWJZ_fake_script)()
-local function KJYZETN_fake_script() -- telekinesis.LocalScript 
+coroutine.wrap(QQPZ_fake_script)()
+local function GHGO_fake_script() -- telekinesis.LocalScript 
 	local script = Instance.new('LocalScript', telekinesis)
 
 	function func()
@@ -1086,4 +1099,57 @@ local function KJYZETN_fake_script() -- telekinesis.LocalScript
 	
 	script.Parent.Activated:Connect(func)
 end
-coroutine.wrap(KJYZETN_fake_script)()
+coroutine.wrap(GHGO_fake_script)()
+local function BBEIR_fake_script() -- movepart.LocalScript 
+	local script = Instance.new('LocalScript', movepart)
+
+	function func()
+		tool = Instance.new("Tool")
+		tool.Name = "Telekinesis"
+		tool.Parent = game.Players.LocalPlayer.Backpack
+	
+		handle = Instance.new("Part")
+		handle.Name = "Handle"
+		handle.Size = Vector3.new(1, 1, 1)
+		handle.Parent = tool
+	
+		sp = Instance.new("Tool")
+		sp.Name = "Select Part"
+		sp.Parent = game.Players.LocalPlayer.Backpack
+	
+		sph = Instance.new("Part")
+		sph.Size = Vector3.new(1, 1, 1)
+		sph.Name = "Handle"
+		sph.Parent = sp
+	
+		function selectpart()
+			targetpart = game.Players.LocalPlayer:GetMouse().Target
+		end
+	
+		function t()
+			if targetpart:FindFirstChild("BodyPosition") then
+				targetpart.BodyPosition:Destroy()
+			end
+			bp = Instance.new("BodyPosition")
+			bp.MaxForce = Vector3.new(40000, 40000, 40000)
+			bp.D = 1000
+			bp.P = 10000
+			bp.Parent = targetpart
+			bp.Position = game.Players.LocalPlayer:GetMouse().Hit.Position
+		end
+	
+		function d()
+			for _, bodypos in pairs(part:GetChildren()) do
+				bodypos:Destroy()
+			end
+		end
+	
+		tool.Activated:Connect(t)
+		sp.Activated:Connect(selectpart)
+		tool.Unequipped:Connect(d)
+	end
+	
+	script.Parent.Activated:Connect(func)
+	
+end
+coroutine.wrap(BBEIR_fake_script)()
