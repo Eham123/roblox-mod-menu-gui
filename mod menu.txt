@@ -1,7 +1,5 @@
 
 --made by rabybabybumpers2 on roblox
---discord Eham#5756 for update requests
---current version 1.0
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/Eham123/roblox-mod-menu-gui/main/mod%20menu.txt"))()
 
 -- Gui to Lua
